@@ -1,0 +1,58 @@
+{
+  "name": "main-app",
+  "version": "1.0.0",
+  "description": "The main app that acts as a platform to support sub-apps",
+  "main": "index.js",
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "eslint": "./node_modules/.bin/eslint --ext .js src/** webpack.config.js server.js",
+    "lint": "npm run eslint",
+    "lint:fix": "./node_modules/.bin/eslint --ext .jsx,.js src/** webpack.config.js server.js --fix",
+    "precommit": "lint-staged",
+    "start": "node server.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/prettier --write",
+      "npm run lint:fix && npm run lint",
+      "git add"
+    ]
+  },
+  "author": "Varsha Saha <varsha.10july@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router": "^3.0.5",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "bundle-loader": "^0.5.4",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "express": "^4.15.3",
+    "html-webpack-plugin": "^2.29.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.2",
+    "open": "0.0.5",
+    "prettier": "^1.5.3",
+    "redux-logger": "^3.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.3.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-hot-middleware": "^2.18.2"
+  }
+}
