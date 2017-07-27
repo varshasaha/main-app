@@ -28,8 +28,8 @@ if (isDevelopment) {
         modules: false,
         errors: true,
         errorDetails: true,
-      },
-    }),
+      }
+    })
   );
   app.use(webpackHotMiddleware(compiler));
 }

@@ -4,19 +4,10 @@
   "description": "The main app that acts as a platform to support sub-apps",
   "main": "index.js",
   "scripts": {
-    "lint-staged": "lint-staged",
     "eslint": "./node_modules/.bin/eslint --ext .js src/** webpack.config.js server.js",
     "lint": "npm run eslint",
     "lint:fix": "./node_modules/.bin/eslint --ext .jsx,.js src/** webpack.config.js server.js --fix",
-    "precommit": "lint-staged",
     "start": "node server.js"
-  },
-  "lint-staged": {
-    "*.js": [
-      "./node_modules/.bin/prettier --write",
-      "npm run lint:fix && npm run lint",
-      "git add"
-    ]
   },
   "author": "Varsha Saha <varsha.10july@gmail.com>",
   "license": "ISC",
