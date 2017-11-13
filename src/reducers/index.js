@@ -1,4 +1,6 @@
-export default function medicineStore (state = {}, action) {
+export default function medicineStore (state = {
+  medicine: 'No medicine as of now',
+}, action) {
   switch (action.type) {
     case 'FETCH_MEDICINE': {
       if (action.problem === 'sneeze') {

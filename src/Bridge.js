@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Bridge.css';
 
 const createBridge = (OriginalComponent, store) => {
   class Bridge extends Component {
@@ -12,6 +13,7 @@ const createBridge = (OriginalComponent, store) => {
           ref={bridge => {
             this.bridge = bridge;
           }}
+          className="wrapper"
         />
       );
     }

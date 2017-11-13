@@ -25,11 +25,14 @@ class Content extends Component {
     const { medicine } = this.props;
     return (
       <div className="content">
-        <button onClick={this.onSneeze}> Click to Sneeze </button>
-        <button onClick={this.onLoosies}> Click to Burp </button>
+        <h2>I am the content of parent app</h2>
+        <div>
+          <button onClick={this.onSneeze}> Click to Sneeze </button>
+          <button onClick={this.onLoosies}> Click to Burp </button>
+        </div>
         {medicine
-          ? <div>
-              Father needs to take {medicine}
+          ? <div className="result">
+              I need to take {medicine}
           </div>
           : null}
       </div>
@@ -39,7 +42,7 @@ class Content extends Component {
 
 Content.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  medicine: PropTypes.string.isRequired,
+  medicine: PropTypes.string,
 };
 
 function mapStateToProps (state) {

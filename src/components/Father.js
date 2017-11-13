@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Content from './Content';
+import './Father.css';
 
 const Father = props =>
   <div>
     <Header />
-    <div>
+    <div className="container">
       <Content />
       {props.children}
     </div>
